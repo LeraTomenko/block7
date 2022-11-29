@@ -1,0 +1,98 @@
+body {
+  background: #f2f2f2;
+}
+
+.slider-brands__items {
+  padding-bottom: 20px;
+}
+
+.slider-brands__item {
+  display: flex;
+  width: 224px;
+  height: 72px;
+  background: #ffffff;
+  margin-bottom: 16px;
+  align-items: center;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  justify-content: space-between;
+}
+
+.slider-brands__link {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-left: 24px;
+  padding-right: 10px;
+}
+
+.slider-brands__icon {
+  background: url('../img/slider/arrow.svg');
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+.slider-brands-btn {
+  display: none;
+}
+.hidden {
+  overflow: hidden;
+  max-height: 180px;
+}
+
+/* Мобильный экран */
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .container-for-hidden-brands {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Планшетный экран */
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .slider-brands__wrapper {
+    margin-bottom: 0;
+  }
+
+  .slider-brands__items {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    gap: 10px;
+    justify-content: space-around;
+    padding-bottom: 0;
+  }
+
+  .slider-brands__item {
+    width: 224px;
+    margin-right: 8px;
+  }
+  .slider-brands-btn {
+    display: block;
+    @include styleForButton;
+    padding-top: 0;
+  }
+  .slider-brands-btn__button {
+    @include iconForButton;
+  }
+}
+
+/* Максимальный экран */
+@media screen and (min-width: 1120px) {
+  .slider-brands__items {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    justify-content: space-around;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+  .slider-brands-btn {
+    display: block;
+    @include styleForButton;
+    padding-top: 0;
+  }
+  .slider-brands-btn__button {
+    @include iconForButton;
+  }
+}

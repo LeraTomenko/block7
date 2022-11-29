@@ -1,0 +1,83 @@
+.footer {
+  &__price {
+    max-width: 260px;
+    margin-left: 20px;
+    margin-bottom: 57px;
+  }
+  &__text {
+    color: #1b1c21;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  &__link {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+    font-weight: bold;
+
+    &::after {
+      content: url('../img/footer/arrowFooter.svg');
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 10px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: #7e7e82;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.72;
+  }
+  &__year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  &__politica {
+    margin-bottom: 16px;
+  }
+}
+
+/* Мобильный экран */
+// @media screen and (max-width: 768px) and (min-width: 320px) {
+// }
+
+/* Планшетный экран */
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .footer {
+    &__price {
+      max-width: 500px;
+    }
+    &__items {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &__year {
+      align-items: flex-start;
+    }
+  }
+}
+/* Максимальный экран */
+@media screen and (min-width: 1120px) {
+  .footer {
+    &__price {
+      max-width: 500px;
+    }
+    &__items {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &__year {
+      align-items: flex-start;
+    }
+  }
+}

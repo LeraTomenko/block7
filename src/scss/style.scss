@@ -1,17 +1,10 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+// @import './normalize.scss';
+@import './variables/variables.scss';
+@import './fonts.scss';
+@import './main/main.scss';
+@import './slider-brands/slider-brands.scss';
+@import './slider-repair/slider-repair.scss';
+@import './slider-price/slider-price.scss';
+@import './footer/footer.scss';
+@import './menu-left/menu_left_style.scss';
+@import './popup/popup.scss';

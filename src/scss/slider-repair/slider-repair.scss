@@ -1,0 +1,91 @@
+.hidden-repair {
+  overflow: hidden;
+  max-height: 169px;
+}
+
+.slider-repair {
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    max-width: 240px;
+    height: 160px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+  }
+
+  &__text {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+    margin-right: auto;
+    padding-left: 16px;
+  }
+  &__icon {
+    background: url('../img/slider/arrow.svg');
+    background-repeat: no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    padding-right: 16px;
+  }
+  &__button {
+    display: none;
+  }
+}
+
+/* Мобильный экран */
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .slider-repair {
+    &__item {
+      margin-bottom: 38px;
+    }
+  }
+  .container-for-hidden {
+    padding-bottom: 60px;
+  }
+  .container-for-hidden {
+    padding-bottom: 20px;
+  }
+}
+
+/* Планшетный экран */
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .slider-repair {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 224px);
+      justify-content: space-around;
+      gap: 24px;
+    }
+    &__button {
+      display: block;
+      @include styleForButton;
+    }
+    &__btn {
+      @include iconForButton;
+    }
+  }
+}
+
+/* Максимальный экран */
+@media screen and (min-width: 1120px) {
+  .slider-repair {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 240px);
+      justify-content: space-around;
+      gap: 24px;
+    }
+    &__button {
+      display: block;
+      @include styleForButton;
+    }
+    &__btn {
+      @include iconForButton;
+    }
+  }
+}

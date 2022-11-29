@@ -1,0 +1,50 @@
+.header {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #7e7e82;
+  background: linear-gradient(90deg, #f8f8f8 1.4%, #ffffff 100%);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  margin: 0 0 24px 0;
+}
+
+// Кнопка показать все и скрыть
+
+.button-for-show {
+  display: none;
+  font-family: 'TT Lakes';
+  font-weight: 500;
+  font-size: 16px;
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__icon::before {
+    content: url('../img/expand.svg');
+  }
+  &__text {
+    align-self: center;
+  }
+}
+
+/* Мобильный экран */
+@media screen and (max-width: 768px) and (min-width: 320px) {
+}
+/* Планшетный экран */
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .button-for-show {
+    display: flex;
+  }
+}
+
+/* Максимальный экран */
+@media screen and (min-width: 1120px) {
+  .button-for-show {
+    display: flex;
+  }
+}

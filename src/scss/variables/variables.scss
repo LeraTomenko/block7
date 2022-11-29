@@ -1,0 +1,23 @@
+//Button
+@mixin styleForButton {
+  color: #1b1c21;
+  font-size: 16px;
+  padding-bottom: 16px;
+}
+
+@mixin iconForButton {
+  &::before {
+    content: url('../img/expand.svg');
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@mixin rotateIcon {
+  &::before {
+    content: url('../img/expand.svg');
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotate(180deg);
+  }
+}
