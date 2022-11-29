@@ -43,12 +43,12 @@
     &__item {
       margin-bottom: 38px;
     }
+    &__items {
+      margin-left: 16px;
+    }
   }
   .container-for-hidden {
     padding-bottom: 60px;
-  }
-  .container-for-hidden {
-    padding-bottom: 20px;
   }
 }
 
@@ -68,6 +68,9 @@
     &__btn {
       @include iconForButton;
     }
+  }
+  .hidden-repair {
+    max-height: 163px;
   }
 }
 

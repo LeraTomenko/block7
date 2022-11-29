@@ -3,7 +3,13 @@ body {
   font-family: 'TT Lakes';
   font-size: 16px;
 }
-.container {
+.info__button:hover,
+.slider-repair__btn:hover,
+.slider-brands-btn__button:hover {
+  filter: drop-shadow(0 0 1px rgba(66, 64, 64, 0.5));
+  transition: 0.5s;
+}
+.slider-brands-btn__button .container {
   max-width: 1200px;
   margin: 0 auto;
 }
