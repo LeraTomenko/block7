@@ -10,6 +10,10 @@ const buttonMessengeHeader = document.querySelector('.icon-contact__chat')
 //Кнопки для закрытия
 const closeCallAside = document.querySelector('.call__button-close')
 const closeMessengAside = document.querySelector('.app__button-close')
+//Область для закрытия
+const layoutCall = document.querySelector('.call__layout')
+const layoutMessenge = document.querySelector('.app__container')
+
 // Popap
 const popupCall = document.querySelector('.call')
 const popupMessenge = document.querySelector('.app')
@@ -40,4 +44,16 @@ buttonCallHeader.addEventListener('click', () => {
 //Открытие   заказать обратная связь  c хедера
 buttonMessengeHeader.addEventListener('click', () => {
   popupMessenge.classList.add('active-app')
+})
+
+//Закрытие при нажатие на область
+layoutCall.addEventListener('click', (event) => {
+  if (event.target === layoutCall) {
+    popupCall.classList.remove('active-call')
+  }
+})
+layoutMessenge.addEventListener('click', (event) => {
+  if (event.target === layoutMessenge) {
+    popupMessenge.classList.remove('active-app')
+  }
 })

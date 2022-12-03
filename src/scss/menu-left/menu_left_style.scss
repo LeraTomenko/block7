@@ -1,10 +1,21 @@
 /* TOP */
 .wrapperForMainAndBurger {
-  position: relative;
+  // position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
 }
 .menu-left {
   width: 320px;
-  background: #ffffff;
+}
+.menu-left__layout {
+  background: rgba(255, 254, 254, 0.9);
+  width: 100vw;
+  height: 100vh;
 }
 
 .menu-left-top {
@@ -47,9 +58,10 @@
   margin-right: auto;
 }
 .menu-left__wrapper {
+  max-width: 360px;
   display: flex;
   padding-left: 16px;
-  height: 100%;
+  background-color: #ffffff;
   flex-direction: column;
 }
 
@@ -97,6 +109,7 @@
 /* FOOTER */
 .menu-left__footer {
   padding-bottom: 1px;
+  background-color: #ffffff;
 }
 
 .icon-contact-menu-left {
@@ -175,14 +188,17 @@
 /* Мобильный экран */
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .menu-left {
-    position: absolute;
+    position: fixed;
     z-index: 5;
-    height: 100%;
+  }
+  .menu-left__layout {
+    // height: 100vh;
   }
 
   .menu-left__wrapper {
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
       16px 0px 52px rgba(14, 24, 80, 0.2);
+    max-width: 280px;
   }
   .menu-left__items {
     flex-shrink: 1;
@@ -195,7 +211,7 @@
 /* Планшетный экран */
 @media screen and (min-width: 768px) and (max-width: 1120px) {
   .menu-left {
-    position: absolute;
+    position: fixed;
     height: 100%;
     z-index: 5;
   }
@@ -211,16 +227,39 @@
 
 //  Максимальный экран
 @media screen and (min-width: 1120px) {
-  .wrapperForMainAndBurger {
-    display: flex;
+  .menu-left__layout {
+    background-color: transparent;
+    width: 100%;
   }
   .menu-left {
-    display: block;
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+  }
+  .menu-left {
+    // display: block;
+  }
+  .menu-left-active {
+    display: none;
   }
   .menu-left-top__btn {
     display: none;
   }
   .menu-left-top__container {
     margin-bottom: 240px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapperForMainAndBurger {
+    display: flex;
+  }
+  .menu-left {
+    display: block;
+    position: static;
+    height: 100%;
+  }
+  .menu-left__wrapper {
+    height: 1800px;
   }
 }

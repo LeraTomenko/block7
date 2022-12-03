@@ -1,0 +1,10 @@
+const appForm = document.querySelector('.app__form')
+const callForm = document.querySelector('.call__form')
+
+callForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+})
+
+appForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+})
