@@ -50,6 +50,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10px;
 }
 
 .icon-contact {
@@ -287,6 +288,44 @@ h1 {
 
 /* Максимальный экран */
 @media screen and (min-width: 1120px) {
+  .icon {
+    width: 291px;
+  }
+
+  .icon-contact {
+    display: flex;
+  }
+  .icon-tool__application::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 32px;
+    width: 2px;
+    background-color: #eaeaea;
+    top: 5px;
+    left: -16px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hiddenText {
+    max-height: 160px;
+    overflow: hidden;
+  }
+
+  .info__img-conteiner {
+    margin-right: 28px;
+  }
+
+  .info__img {
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .header-top {
     display: none;
   }
@@ -311,23 +350,5 @@ h1 {
     justify-content: space-between;
     margin-right: 30px;
     align-items: center;
-  }
-
-  .info {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .hiddenText {
-    max-height: 160px;
-    overflow: hidden;
-  }
-
-  .info__img-conteiner {
-    margin-right: 28px;
-  }
-
-  .info__img {
-    border-radius: 5px;
   }
 }
